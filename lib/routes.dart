@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:nidhub_app/screens/forgot_password/forgot_password_screen.dart';
-import 'package:nidhub_app/screens/home_screen/home_screen.dart';
+import 'package:nidhub_app/screens/home_screen/main_screen.dart';
 import 'package:nidhub_app/screens/sign_in/sign_in_screen.dart';
 import 'package:nidhub_app/screens/splash/splash_screen.dart';
 // import 'package:shop_app/screens/cart/cart_screen.dart';
@@ -26,7 +26,7 @@ final Map<String, WidgetBuilder> routes = {
   SignUpScreen.routeName: (context) => SignUpScreen(),
   // CompleteProfileScreen.routeName: (context) => CompleteProfileScreen(),
   // OtpScreen.routeName: (context) => OtpScreen(),
-  HomeScreen.routeName: (context) => HomeScreen(),
+  MainScreen.routeName: (context) => MainScreen(),
   // DetailsScreen.routeName: (context) => DetailsScreen(),
   // CartScreen.routeName: (context) => CartScreen(),
   // ProfileScreen.routeName: (context) => ProfileScreen(),
