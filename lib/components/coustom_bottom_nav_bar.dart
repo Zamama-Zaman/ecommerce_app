@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:nidhub_app/screens/home_screen/main_screen.dart';
+import 'package:nidhub_app/screens/main_screen/main_screen.dart';
 
 import '../constants.dart';
 import '../enums.dart';

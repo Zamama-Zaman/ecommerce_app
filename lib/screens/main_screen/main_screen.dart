@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:nidhub_app/screens/home/home_screen.dart';
+import 'package:nidhub_app/screens/place_offer/place_offer_screen.dart';
+import 'package:nidhub_app/screens/request/request_screen.dart';
+import 'package:nidhub_app/screens/review_offers/review_offers_screen.dart';
 
 class MainScreen extends StatefulWidget {
   static const routeName = "home-screen";
@@ -57,15 +60,20 @@ class _MainScreenState extends State<MainScreen>
         ),
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.search)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)),
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, PlaceOffer.routeName);
+            },
+            icon: Icon(Icons.more_vert),
+          ),
         ],
       ),
       body: TabBarView(
         controller: _controller,
         children: [
           HomeScreen(),
-          Center(child: Text("Requests")),
-          Center(child: Text("Offers")),
+          RequestScreen(),
+          ReviewOffersScreen(),
           Center(child: Text("Profile")),
         ],
       ),
