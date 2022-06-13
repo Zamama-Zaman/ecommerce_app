@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:nidhub_app/screens/home/home_screen.dart';
 import 'package:nidhub_app/screens/place_offer/place_offer_screen.dart';
+import 'package:nidhub_app/screens/profile/profile_screen.dart';
 import 'package:nidhub_app/screens/request/request_screen.dart';
 import 'package:nidhub_app/screens/review_offers/review_offers_screen.dart';
 
@@ -74,7 +75,7 @@ class _MainScreenState extends State<MainScreen>
           HomeScreen(),
           RequestScreen(),
           ReviewOffersScreen(),
-          Center(child: Text("Profile")),
+          ProfileScreen(),
         ],
       ),
     );
