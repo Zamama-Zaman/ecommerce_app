@@ -1,10 +1,14 @@
 import 'package:flutter/widgets.dart';
+import 'package:nidhub_app/screens/catalog_form/catalog_form_screen.dart';
 import 'package:nidhub_app/screens/forgot_password/forgot_password_screen.dart';
 import 'package:nidhub_app/screens/form/form_screen.dart';
 import 'package:nidhub_app/screens/main_screen/main_screen.dart';
 import 'package:nidhub_app/screens/place_offer/place_offer_screen.dart';
+import 'package:nidhub_app/screens/product_form/product_form_screen.dart';
+import 'package:nidhub_app/screens/product_list/product_list_screen.dart';
 import 'package:nidhub_app/screens/request/request_screen.dart';
 import 'package:nidhub_app/screens/review_offers/review_offers_screen.dart';
+import 'package:nidhub_app/screens/seller_profile/seller_profile_screen.dart';
 import 'package:nidhub_app/screens/sign_in/sign_in_screen.dart';
 import 'package:nidhub_app/screens/splash/splash_screen.dart';
 // import 'package:shop_app/screens/cart/cart_screen.dart';
@@ -35,6 +39,10 @@ final Map<String, WidgetBuilder> routes = {
   FormScreen.routeName: (context) => const FormScreen(),
   ReviewOffersScreen.routeName: (context) => const ReviewOffersScreen(),
   PlaceOffer.routeName: (context) => const PlaceOffer(),
+  SellerProfileScreen.routeName: (context) => const SellerProfileScreen(),
+  CatalogFormScreen.routeName: (context) => const CatalogFormScreen(),
+  ProductFormScreen.routeName: (context) => const ProductFormScreen(),
+  ProductListScreen.routeName: (context) => const ProductListScreen(),
 
   // DetailsScreen.routeName: (context) => DetailsScreen(),
   // CartScreen.routeName: (context) => CartScreen(),

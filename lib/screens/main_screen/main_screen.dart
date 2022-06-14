@@ -6,6 +6,7 @@ import 'package:nidhub_app/screens/place_offer/place_offer_screen.dart';
 import 'package:nidhub_app/screens/profile/profile_screen.dart';
 import 'package:nidhub_app/screens/request/request_screen.dart';
 import 'package:nidhub_app/screens/review_offers/review_offers_screen.dart';
+import 'package:nidhub_app/screens/seller_profile/seller_profile_screen.dart';
 
 class MainScreen extends StatefulWidget {
   static const routeName = "home-screen";
@@ -37,6 +38,37 @@ class _MainScreenState extends State<MainScreen>
     Tab(text: "OFFERS"),
     Tab(text: "PROFILE"),
   ];
+
+  Widget popupMenuButton() {
+    return PopupMenuButton(
+      icon: Icon(Icons.more_vert),
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+        PopupMenuItem<String>(
+          child: TextButton(
+            child: const Text(
+              'Place Offer',
+              style: TextStyle(color: Colors.black),
+            ),
+            onPressed: () async {
+              Navigator.pushNamed(context, PlaceOffer.routeName);
+            },
+          ),
+        ),
+        PopupMenuItem<String>(
+          child: TextButton(
+            child: const Text(
+              'Seller Profile',
+              style: TextStyle(color: Colors.black),
+            ),
+            onPressed: () async {
+              Navigator.pushNamed(context, SellerProfileScreen.routeName);
+            },
+          ),
+        )
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,12 +93,14 @@ class _MainScreenState extends State<MainScreen>
         ),
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.search)),
-          IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, PlaceOffer.routeName);
-            },
-            icon: Icon(Icons.more_vert),
-          ),
+          popupMenuButton(),
+          // IconButton(
+          //   onPressed: () {
+          // Navigator.pushNamed(context, PlaceOffer.routeName);
+          //     Navigator.pushNamed(context, SellerProfileScreen.routeName);
+          //   },
+          //   icon: Icon(Icons.more_vert),
+          // ),
         ],
       ),
       body: TabBarView(
