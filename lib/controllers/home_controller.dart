@@ -15,7 +15,7 @@ class HomeController extends GetxController {
 
   // var home = <HomeModel>[].obs;
 
-  RxBool isLoading = false.obs;
+  RxBool isLoading = true.obs;
 
   @override
   void onInit() {
@@ -29,8 +29,10 @@ class HomeController extends GetxController {
       final response = await http
           .get(Uri.parse("https://innovativehill.com/nidhub/home.php"));
       if (response.statusCode == 200) {
-        home = HomeModel.fromJson(jsonDecode(response.body)).obs;
-        isLoading.value = false;
+        Future.delayed(const Duration(seconds: 20), () {
+          home = HomeModel.fromJson(jsonDecode(response.body)).obs;
+          isLoading.value = false;
+        });
       } else {
         Get.snackbar(
             "Error Loading Data", "Server Response: ${response.statusCode}");

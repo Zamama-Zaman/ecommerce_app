@@ -12,8 +12,24 @@ class HomeScreen extends StatelessWidget {
   static String routeName = "/home";
   @override
   Widget build(BuildContext context) {
+    final _homeController = Get.find<HomeController>();
     return Scaffold(
-      body: Body(),
+      body: Obx(
+        () => _homeController.isLoading.value
+            ? Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Text("Loading..."),
+                    SizedBox(height: 20),
+                    CircularProgressIndicator(
+                      color: Colors.black,
+                    ),
+                  ],
+                ),
+              )
+            : Body(),
+      ),
       // bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
     );
   }
