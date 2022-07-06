@@ -26,8 +26,8 @@ class HomeController extends GetxController {
   Future<void> fetchHomeData() async {
     try {
       isLoading.value = true;
-      final response = await http
-          .get(Uri.parse("https://innovativehill.com/nidhub/home.php"));
+      final response =
+          await http.get(Uri.parse("https://apprant.com/nidhub/home.php"));
       if (response.statusCode == 200) {
         Future.delayed(const Duration(seconds: 20), () {
           home = HomeModel.fromJson(jsonDecode(response.body)).obs;

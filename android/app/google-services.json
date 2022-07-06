@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "481707410686",
+    "firebase_url": "https://glr-groups-app-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "glr-groups-app",
+    "storage_bucket": "glr-groups-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481707410686:android:2227282b63ffbad8e6d1af",
+        "android_client_info": {
+          "package_name": "com.example.glr_groups_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "481707410686-a6phf0r0dk9p88vlotnt6i5cjmq1uo9r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDD_NWJNjAUXt7rx8RdRQgBvBVzBq9poX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "481707410686-a6phf0r0dk9p88vlotnt6i5cjmq1uo9r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
